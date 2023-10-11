@@ -41,14 +41,15 @@ Não encontrei a opção de atribuir, a opção existente no vídeo que trata so
 Acrescentar Consultas não cabe ao item 13 devido a forma como funciona, ela unifica em uma tabela todos os campos das tabelas selecionadas. Caso as tabelas tenham campos com nomes em comuns, eles estarão preenchidos conforme as tabelas originais, os campos que existem apenas em uma tabela, ficaram com valor nulo para os registros da outra tabela.
 Imagine o caso onde temos a tabela Empregados (id, nome, endereço, salario) e a tabela Dependentes onde temos (id, nome, parentesco, id_funcionario). Ao realizar o Acrescentar com essas duas tabelas o resultado seria uma tabela Empregados_Dependentes (id, nome, endereço, salario, parentesco, id_funcionario). Vou exemplificar com dados agora.
 
-### Empregados
+
+#### Empregados
 | Id  | Nome        | Endereço                            | Salario  |
 |:---:| :---        | :---                                | ---:     |
 | 1   | Christiano  | Rua do Código, 512, Sarara, MG      | 5.000,00 |
 | 2   | Jeronimo    | Rua do Porto, 77, Verdemar, RJ      | 7.000,00 |
 | 3   | Zelele      | Rodovia 512 Km 5, S/N, Malhada, GO  | 7.500,00 |
 
-Dependentes
+#### Dependentes
 |Id  |Nome        |Parentesco  |Id_Funcionario |
 |:--:|:---        |:---        |:----:         |
 |1   |Enzo        |Filho       |2              |
@@ -56,7 +57,7 @@ Dependentes
 |3   |Rose        |Conjuge     |1              |
 |4   |Maria       |Filho       |3              |
 
-Empregados_Dependentes
+#### Empregados_Dependentes
 | Id  | Nome        | Endereço                            | Salario   | Parentesco  | Id_Funcionario |
 |:---:| :---        | :---                                | ---:      |:---         |:----:          |      
 | 1   | Christiano  | Rua do Código, 512, Sarara, MG      | 5.000,00  | Null        | Null           |
@@ -68,7 +69,8 @@ Empregados_Dependentes
 | 4   | Maria       | Null                                | Null      | Filho       | 3              |
 
 Os campos cujo as tabelas originais possuem valor, serão preenchidos, cada um em seu respectivo registro (linha), os demais serão nulos.
-    
+
+
 ✔ - 15. Agrupe os dados a fim de saber quantos colaboradores existem por gerente
 
 ✔ - 16. Elimine as colunas desnecessárias, que não serão usadas no relatório, de cada tabela
